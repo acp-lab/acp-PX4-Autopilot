@@ -46,6 +46,7 @@ function spawn_model() {
 	set -- ${@} --gst_udp_port $((5600+${N}))
 	set -- ${@} --video_uri $((5600+${N}))
 	set -- ${@} --mavlink_cam_udp_port $((14530+${N}))
+	set -- ${@} --ros_namespace px4_${N}
 	set -- ${@} --output-file /tmp/${MODEL}_${N}.sdf
 
 	python3 ${@}
